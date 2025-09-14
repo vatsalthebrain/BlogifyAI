@@ -22,7 +22,7 @@ const Navbar = () => {
     <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle"
           fontFamily="-apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif"
           fontSize="80" fontWeight="800" fill="url(#g)" letterSpacing="1">
-      Blogify
+      BlogifyAi
     </text>
   </svg>
 </div>

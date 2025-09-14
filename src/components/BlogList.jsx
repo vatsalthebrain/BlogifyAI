@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { blogCategories } from '../assets/assets';
+import { blog_data, blogCategories } from '../assets/assets';
+import BlogCard from './Blogcard'
 
 const BlogList = () => {
   const [menu, setMenu] = useState('All');
@@ -23,7 +24,14 @@ const BlogList = () => {
           </div>
         ))}
       </div>
-      <div></div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-24 mx-8 sm:mx-16 xl:mx-40">
+        {blog_data
+          .filter((blog) => (menu === 'All' ? true : blog.category === menu))
+          .map((blog) => (
+            <BlogCard blog={blog} key={blog._id} />
+          ))}
+      </div>
     </div>
   );
 };
